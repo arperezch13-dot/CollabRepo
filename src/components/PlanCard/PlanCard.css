@@ -1,0 +1,25 @@
+.plan-card {
+
+    border: 3px solid gold;
+    border-radius: 10px;
+    padding: 15px;
+    margin:10px;
+    width: 200px;
+    text-align: center;
+}
+
+.outstanding {
+    border: 6px solid gold;
+    box-shadow: 0 0 10px gold;
+    transform: scale(1.05);
+    border-color: gold;
+    background-color: #3cd5ec;
+}
+
+.label-popular {
+    background-color: blue;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}

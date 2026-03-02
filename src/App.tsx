@@ -1,33 +1,23 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Server from './components/Server/Server'
+import StockBadge from './components/StockBadge/StockBadge'
+import PlanCard from './components/PlanCard/PlanCard'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Server serverName="Web principal" status="online" />
+      <Server serverName="Base de datos" status="online" />
+      <Server serverName="Api de pagos" status="offline" />
+
+      <StockBadge productName="Camiseta" stock={0} />
+      <StockBadge productName="Gorra" stock={5} />
+      <StockBadge productName="Taza" stock={15} />
+
+      <PlanCard planName='Bassic' price={5} isPopular/>
+      <PlanCard planName='Pro' price={15} isPopular={false}/>
+      
     </>
   )
 }
