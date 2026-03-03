@@ -16,8 +16,10 @@ const Notification = (props: NotificationProps) => {
     }
   return (
 
-    <div className={`style-card p-4 rounded-lg border margin-30 ${styles[props.type]}`}>
-      {props.message}</div>
+    <div className={`style-card p-4 rounded-lg border my-30 ${styles[props.type]}`}>
+    <p className="text-sm">{props.message}</p>
+
+    </div>
   ) 
 }
 
