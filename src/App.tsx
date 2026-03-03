@@ -2,6 +2,7 @@ import './App.css'
 import Server from './components/Server/Server'
 import StockBadge from './components/StockBadge/StockBadge'
 import PlanCard from './components/PlanCard/PlanCard'
+import Notification from './components/Notification/Notification'
 
 function App() {
 
@@ -17,6 +18,10 @@ function App() {
 
       <PlanCard planName='Bassic' price={5} isPopular/>
       <PlanCard planName='Pro' price={15} isPopular={false}/>
+
+      <Notification message= 'Success operation completed' type='success'/>
+      <Notification message= 'Warning: Check your input' type='alert'/>
+      <Notification message= 'Error: Something went wrong' type='error'/>
       
     </>
   )

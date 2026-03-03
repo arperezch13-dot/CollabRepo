@@ -16,8 +16,9 @@ const Notification = (props: NotificationProps) => {
     }
   return (
 
-    <div>Notification</div>
-  )
+    <div className={`style-card p-4 rounded-lg border margin-30 ${styles[props.type]}`}>
+      {props.message}</div>
+  ) 
 }
 
 export default Notification
